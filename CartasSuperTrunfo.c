@@ -6,8 +6,7 @@ int main(){
   
     char estado[10], cidade[20], codigo[10];
     int population, pontos;
-    float area, PIB;
- 
+    float area, PIB, dpopulation, PIBperc, media;
 
     printf("Carta 1 \n");
     printf("Digite o nome do Estado: \n");
@@ -24,25 +23,27 @@ int main(){
     scanf("%d", &population);
 
     printf("digite a area da cidade em Km²: \n");
-    scanf("%f Km²", &area);
+    scanf("%f", &area);
 
     printf("Digite o PIB da cidade: \n");
-    scanf("%f Bi", &PIB);
+    scanf("%f", &PIB);
 
     printf("Digite o numero de pontos turísticos: \n");
     scanf("%d", &pontos);
 
-
-
+    dpopulation = population / area;
+    PIBperc = PIB / population;
+    
     printf("carta 1 \n");
     printf("Estado: %s\n", estado);
     printf("Código: %s\n", codigo);
     printf("Cidade: %s\n", cidade);
     printf("População: %d\n", population);
-    printf("Área: %f Km²\n", area);
-    printf("PIB: %f Bi\n", PIB);
+    printf("Área em Km²: %.2f Km²\n", area);
+    printf("PIB: %.2f Bi\n", PIB);
     printf("Pontos turísticos: %d\n", pontos);
-
+    printf("A densidade populacional é: %.2f\n", dpopulation);
+    printf("O PIB per capta é: %.2f\n", PIBperc);
 
 
     printf("Carta 2 \n");
@@ -60,14 +61,13 @@ int main(){
     scanf("%d", &population);
 
     printf("digite a area da cidade em Km²: \n");
-    scanf("%f Km²", &area);
+    scanf("%f", &area);
 
     printf("Digite o PIB da cidade: \n");
-    scanf("%f Bi", &PIB);
+    scanf("%f", &PIB);
 
     printf("Digite o numero de pontos turísticos: \n");
     scanf("%d", &pontos);
-
 
 
     printf("carta 2 \n");
@@ -75,10 +75,15 @@ int main(){
     printf("Código: %s\n", codigo);
     printf("Cidade: %s\n", cidade);
     printf("População: %d\n", population);
-    printf("Área: %f Km²\n", area);
-    printf("PIB: %f Bi\n", PIB);
+    printf("Área em Km²: %.2f Km²\n", area);
+    printf("PIB: %.2f Bi\n", PIB);
     printf("Pontos turísticos: %d\n", pontos);
+    printf("A densidade populacional é: %.2f\n", dpopulation);
+    printf("O PIB per capta é: %.2f\n", PIBperc);
 
+    
 
   return 0;
+
+
 }
