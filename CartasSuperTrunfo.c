@@ -8,6 +8,7 @@ int main(){
     float area, PIB, dpopulation, PIBperc, area2, PIB2, dpopulation2, PIBperc2, superPower, superPower2;
     unsigned long int population, population2;
     int resultado, resultado2, resultado3, resultado4, resultado5, resultado6, resultado7;
+    float PdPopulation, PdPopulation2;
 
     printf("Carta 1 \n");
     printf("Digite o nome do Estado: \n");
@@ -33,7 +34,8 @@ int main(){
 
     dpopulation = population / area;
     PIBperc = PIB / population;
-    superPower =  population + area + PIB + (float)pontos + PIBperc + (dpopulation - (dpopulation * 2));
+    PdPopulation = dpopulation - (dpopulation * 2);
+    superPower =  population + area + PIB + (float)pontos + PIBperc + PdPopulation;
     
     printf("carta 1 \n");
     printf("Estado: %s\n", estado);
@@ -71,7 +73,8 @@ int main(){
 
     dpopulation2 = population2 / area2;
     PIBperc2 = PIB2 / population2;
-    superPower2=  population2+ area2+ PIB2+ (float)pontos2+ PIBperc2+ (dpopulation2- (dpopulation2* 2));
+    PdPopulation2 = dpopulation2- (dpopulation2* 2);
+    superPower2=  population2+ area2+ PIB2+ (float)pontos2+ PIBperc2+ PdPopulation2;
     
     
     printf("carta 2 \n");
@@ -90,7 +93,7 @@ int main(){
     resultado2 = area > area;
     resultado3 = PIB > PIB2;
     resultado4 = pontos > pontos2;
-    resultado5 = dpopulation > dpopulation2;
+    resultado5 = dpopulation - ( dpopulation * 2) > dpopulation2 - (dpopulation2 * 2);
     resultado6 = PIBperc > PIBperc2;
     resultado7 = superPower >superPower2;
 
@@ -103,8 +106,9 @@ int main(){
     printf("PIB Per Capta: %d\n", resultado6);
     printf("Super Poder: %d\n", resultado7);
     
-    
   return 0;
+
+
 }
 
 
