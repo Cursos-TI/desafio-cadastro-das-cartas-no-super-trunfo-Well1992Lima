@@ -34,7 +34,6 @@ int main(){
 
     dpopulation = population / area;
     PIBperc = PIB / population;
-    PdPopulation = dpopulation - (dpopulation * 2);
     superPower =  population + area + PIB + (float)pontos + PIBperc + PdPopulation;
     
     printf("carta 1 \n");
@@ -73,7 +72,6 @@ int main(){
 
     dpopulation2 = population2 / area2;
     PIBperc2 = PIB2 / population2;
-    PdPopulation2 = dpopulation2- (dpopulation2* 2);
     superPower2=  population2+ area2+ PIB2+ (float)pontos2+ PIBperc2+ PdPopulation2;
     
     
@@ -90,10 +88,10 @@ int main(){
         
     printf("A comparação entre as cartas 1 e 2:\n");
     resultado = population > population2;
-    resultado2 = area > area;
+    resultado2 = area > area2;
     resultado3 = PIB > PIB2;
     resultado4 = pontos > pontos2;
-    resultado5 = dpopulation - ( dpopulation * 2) > dpopulation2 - (dpopulation2 * 2);
+    resultado5 = (1 / dpopulation) > (1 / dpopulation2);
     resultado6 = PIBperc > PIBperc2;
     resultado7 = superPower >superPower2;
 
@@ -109,6 +107,6 @@ int main(){
   return 0;
 
 
-}
+} 
 
 
